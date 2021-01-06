@@ -7,8 +7,8 @@ export default function Header (){
             <ul>
                 <Link href="/" className="item">Default</Link>
                 <Link href="/tracks" className="item">Tracks</Link>
-                <Link href="/number" className="item">Number</Link>
-                <Link href="/all" className="item">All</Link>
+                <Link href="/cocktaildb" className="item">Cocktail</Link>
+                <Link href="/mix" className="item">Egayez vos soirées</Link>
             </ul>
         </header>
     );

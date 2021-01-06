@@ -19,7 +19,7 @@ export default function Search(){
     }
     return(
         <div>
-            <h2>Enter what you search</h2>
+            <h2>Entrez ce que vous cherchez</h2>
             <input type="text" onChange={(event) => setInput(event.target.value)}></input>
             <button onClick={confirm}>search</button>
             { answers ? answers.map( answer => <p key={answer.id}>Title: {answer.title}, Artist: {answer.artist.name}</p> ) : <p>Frero y a R viens sur le vieux port un peu</p>}
