@@ -39,38 +39,43 @@ export default function Info(){
     }, [])
 
     return(
-        <div>
+        <div className="container">
             { (display === "album" && info.artist) && 
-                <div>
-                    Album: {info.title} <br/>
-                    Artist: {info.artist.name} <br/> 
-                    Music: 
-                        <ul>
-                            {info.tracks.data.map(track => <li key={track.id}>{track.title}</li>)}
-                        </ul>
-                </div>}
+                <div className="row">
+                    <div className="col-12">Album: {info.title}</div>
+                    <div className="col-12">Artist: {info.artist.name}</div>
+                    <div className="col-12 list-deco-container">Musics: 
+                            {info.tracks.data.map(track => <li className="col-12" key={track.id}>{track.title}</li>)}
+                    </div>
+                </div>
+            }
             { display === "artist"  && 
-                <div>
-                    Artiste: {info.name} <br/> 
-                    <img src={info.picture}/> <br/> 
-                    Nombre d'albums: {info.nb_album} <br/> 
-                    Nombre de fans: {info.nb_fan}
+                <div className="row">
+                    <div className="col-12">Artiste: {info.name}</div>
+                    <div className="col-12"><img src={info.picture}/></div>
+                    <div className="col-12">Nombre d'albums: {info.nb_album}</div>
+                    <div className="col-12">Nombre de fans: {info.nb_fan}</div>
                 </div>
             }
             { (display === "track" && info.contributors)  && 
-                <div>
-                    Titre: {info.title}<br/>
-                    Artiste: 
-                        <ul>
-                            {info.contributors.map( artist => 
-                            <li key={artist.id}>
+                <div className="row">
+                    <div className="col-12">Titre: {info.title}</div>
+                    <div className="col-12 list-deco-container">
+                        Artiste:
+                        {info.contributors.map( artist => 
+                            <li className="col-12"key={artist.id}>
                                 {artist.name}
-                            </li>)}
-                        </ul>
+                            </li>)
+                        }
+                    </div>
+                    <div className="col-12">Album: {info.album.title}</div>
+                    <div className="col-12">Durée: {Math.trunc(info.duration/60)}mn{info.duration%60 }</div>
+                     
+
                       <br/>
                     
-                    Album: {info.album.title} <br/>
-                    Durée: {Math.trunc(info.duration/60)}mn{info.duration%60 }<br/>
+                     <br/>
+                    <br/>
                 </div>}
         </div>
     )

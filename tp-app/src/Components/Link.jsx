@@ -14,6 +14,6 @@ export default function Link({ className, href, children }){
     };
 
     return(
-        <li><a className={className} href={href} onClick={onClick}> {children} </a></li>
+        <li className={className}><a  href={href} onClick={onClick}> {children} </a></li>
     );
 }

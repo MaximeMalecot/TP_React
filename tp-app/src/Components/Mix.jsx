@@ -32,12 +32,15 @@ export default function Mix(){
     }, [cocktail])
     
     return(
-        <div>
+        <div className="container">
             { (music && cocktail) && 
-            <div>
-                Nous vous conseillons de boire un <a key={cocktail.idDrink} href={"/cocktail?id="+cocktail.idDrink}>{cocktail.strDrink}</a> avec la musique <a key={music.id} href={"/info?music="+music.id}>{music.title}</a> de <a key={music.artist.id} href={"/info?artist="+music.artist.id}>{music.artist.name}</a>
-
-                <h1>Comment faire un {cocktail.strDrink} :</h1>
+            <div className="row">
+                <div className="col-12">
+                    Nous vous conseillons de boire un <a key={cocktail.idDrink} href={"/cocktail?id="+cocktail.idDrink}>{cocktail.strDrink}</a> avec la musique <a key={music.id} href={"/info?music="+music.id}>{music.title}</a> de <a key={music.artist.id} href={"/info?artist="+music.artist.id}>{music.artist.name}</a>
+                </div>
+                <div className="col-12">
+                    <h1>Comment faire un {cocktail.strDrink} :</h1>
+                </div>
                 <Cocktail data={cocktail.idDrink}/>
             </div>
             }
