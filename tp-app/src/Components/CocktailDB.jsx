@@ -19,15 +19,22 @@ export default function CocktailDB(){
         fetchData();
     }
     return(
-        <div>
-            <h2>Vous cherchez un cocktail ?</h2>
-            <input type="text" onChange={(event) => setInput(event.target.value)}></input>
-            <button onClick={confirm}>search</button>
+        <div className="container">
+            <div className="row">
+                <div className="col-inner col-12">
+                    <h2>Vous cherchez un cocktail ?</h2>
+                    <input type="text" onChange={(event) => setInput(event.target.value)}></input>
+                    <button onClick={confirm}>search</button>
+                </div>
+            </div>
+            <div className="row list-container">
             { answers ? answers.map( answer => 
-            <Link key={answer.idDrink} href={"/cocktail?id="+answer.idDrink}>
+            <Link className="col-inner col-12" key={answer.idDrink} href={"/cocktail?id="+answer.idDrink}>
                 Nom: {answer.strDrink}
             </Link> ) : 
-            <p>Frero y a R viens sur le vieux port un peu</p>}
+            <div className="col-inner col-12">Frero y a R viens sur le vieux port un peu</div>}
+            </div>
+            
         </div>
     );
 }
