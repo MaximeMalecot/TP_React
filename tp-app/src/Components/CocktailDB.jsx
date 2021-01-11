@@ -23,8 +23,8 @@ export default function CocktailDB(){
             <div className="row">
                 <div className="col-inner col-12">
                     <h2>Vous cherchez un cocktail ?</h2>
-                    <input type="text" onChange={(event) => setInput(event.target.value)}></input>
-                    <button onClick={confirm}>search</button>
+                    <input className="inpt" type="text" onChange={(event) => setInput(event.target.value)}></input>
+                    <button className="btn" onClick={confirm}>search</button>
                 </div>
             </div>
             <div className="row list-container">

@@ -1,23 +1,4 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-
-export default function Mix(){
-    const [cocktail, setCocktail] = useState();
-    const [music, setMusic] = useState();
-
-    useEffect(() => {
-        const fetchData = async () => fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
-            .then((res) => res.json())
-            .then((res) => { 
-                setCocktail(res)
-            })
-            .catch((e) => console.error(e));
-        fetchData();
-    }, [])
-    return(
-        <div>
-            {JSON.stringify(cocktail)}
-=======
 import Cocktail from "./Cocktail"
 
 export default function Mix(){
@@ -54,7 +35,7 @@ export default function Mix(){
         <div className="container">
             { (music && cocktail) && 
             <div className="row">
-                <div className="col-12">
+                <div className="col-12 result">
                     Nous vous conseillons de boire un <a key={cocktail.idDrink} href={"/cocktail?id="+cocktail.idDrink}>{cocktail.strDrink}</a> avec la musique <a key={music.id} href={"/info?music="+music.id}>{music.title}</a> de <a key={music.artist.id} href={"/info?artist="+music.artist.id}>{music.artist.name}</a>
                 </div>
                 <div className="col-12">
@@ -63,7 +44,6 @@ export default function Mix(){
                 <Cocktail data={cocktail.idDrink}/>
             </div>
             }
->>>>>>> feature/MixAPIS
         </div>
     )
 }

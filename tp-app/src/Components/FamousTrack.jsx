@@ -26,9 +26,9 @@ export default function FamousTrack(){
         <div className="container">
             <div className="row">
                 <div className="col-inner col-12">
-                    <button onClick={() => setDisplay("albums")}>Albums</button>
-                    <button onClick={() => setDisplay("artists")}>Artists</button>
-                    <button onClick={() => setDisplay("tracks")}>Tracks</button>
+                    <button className="btn" onClick={() => setDisplay("albums")}>Albums</button>
+                    <button className="btn" onClick={() => setDisplay("artists")}>Artists</button>
+                    <button className="btn" onClick={() => setDisplay("tracks")}>Tracks</button>
                 </div>
             </div>
             <div className="row list-container">

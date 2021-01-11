@@ -18,7 +18,7 @@ header > ul{
   margin: 0;
   padding: 0;
   overflow: auto;
-  background-color: #e60f32;
+  background-color: #007bff;
 }
 header > ul > li{
   flex-basis: calc(100%/4);
@@ -34,7 +34,7 @@ header > ul > li > a{
 }
 
 header > ul > li > a:hover, header > ul > li > a:focus{
-  background-color: #6e0619;
+  background-color: #023368;
   color: white;
 }
 
@@ -90,4 +90,39 @@ header > ul > li > a:hover, header > ul > li > a:focus{
   margin: 0;
   padding: 0;
   overflow: auto;
+}
+
+.btn{
+  width: auto;
+  height: 22.5px;
+  color: #007bff;
+  background-color: white;
+  background-image: none;
+  border-color: #007bff;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 5px ;
+  margin: 5px;
+}
+
+.btn:hover{
+  color: white;
+  background-color: #007bff;
+}
+
+.inpt{
+  height: 22.5px;
+  border-radius: 5px;
+}
+
+body{
+  background-color: aqua
+}
+
+.result > a{
+  color: black;
+}
+
+.result > a:hover, .result > a:focus{
+  color: blue;
 }

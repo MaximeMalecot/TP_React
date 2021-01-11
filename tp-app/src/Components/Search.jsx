@@ -22,8 +22,8 @@ export default function Search( {className} ){
         <div className="row list-container">
             <div className="col-12">
                 <h2>Entrez ce que vous cherchez</h2>
-                <input type="text" onChange={(event) => setInput(event.target.value)}></input>
-                <button onClick={confirm}>search</button>
+                <input className="inpt" type="text" onChange={(event) => setInput(event.target.value)}></input>
+                <button className="btn" onClick={confirm}>search</button>
             </div>
             { 
                 answers ? answers.map( answer => <li className="col-12" key={answer.id}>Title: <a key={answer.id} href={"/info?music="+answer.id}>{answer.title}</a>, Artist: <a key={answer.artist.id} href={"/info?artist="+answer.artist.id}>{answer.artist.name}</a></li> ) : <p className="col-12">Frero y a R viens sur le vieux port un peu</p>
