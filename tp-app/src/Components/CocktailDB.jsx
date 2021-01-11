@@ -27,13 +27,13 @@ export default function CocktailDB(){
                     <button className="btn" onClick={confirm}>search</button>
                 </div>
             </div>
-            <div className="row list-container">
+            <ul className="row list-container">
             { answers ? answers.map( answer => 
             <Link className="col-inner col-12" key={answer.idDrink} href={"/cocktail?id="+answer.idDrink}>
                 Nom: {answer.strDrink}
             </Link> ) : 
             <div className="col-inner col-12">Frero y a R viens sur le vieux port un peu</div>}
-            </div>
+            </ul>
             
         </div>
     );

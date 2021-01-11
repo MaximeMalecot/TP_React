@@ -24,7 +24,6 @@ export default function Mix(){
 
     useEffect(() => {
         if(cocktail){
-            console.log(JSON.stringify(cocktail))
             fetchMusic(cocktail.strDrink);
         }else{
             fetchCocktail();

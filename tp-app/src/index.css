@@ -74,15 +74,25 @@ header > ul > li > a:hover, header > ul > li > a:focus{
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .list-container > li > a{
   color: black;
+  text-decoration: none;
 }
 
-.list-container > li > a:hover, .list-container > li > a:focus{
+.list-container > li > a:hover{
   color: blue;
+}
+
+.list-container > li{
+  transition: 0.5s;
+}
+
+.list-container > li:hover{
+  transition: 0.5s;
+  transform: scale(1.1, 1.1);
 }
 
 .list-deco-container{
@@ -94,7 +104,7 @@ header > ul > li > a:hover, header > ul > li > a:focus{
 
 .btn{
   width: auto;
-  height: 22.5px;
+  height: 25px;
   color: #007bff;
   background-color: white;
   background-image: none;
@@ -123,6 +133,6 @@ body{
   color: black;
 }
 
-.result > a:hover, .result > a:focus{
+.result > a:hover{
   color: blue;
 }
