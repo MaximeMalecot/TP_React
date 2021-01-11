@@ -35,8 +35,7 @@ export default function Info(){
             })
             .catch((e) => console.error(e));
         fetchData();
-        }
-        // <div>Album: {album.title}<br/> Artist: {album.artist.name} <br/> Music: <ul>{album.tracks.data.map(track => <li>{track.title}</li>)}</ul></div>           
+        }   
     }, [])
 
     return(
@@ -49,7 +48,6 @@ export default function Info(){
                         <ul>
                             {info.tracks.data.map(track => <li key={track.id}>{track.title}</li>)}
                         </ul>
-                    {/*JSON.stringify(info)*/}
                 </div>}
             { display === "artist"  && 
                 <div>
@@ -67,7 +65,6 @@ export default function Info(){
                             {info.contributors.map( artist => 
                             <li key={artist.id}>
                                 {artist.name}
-                                <img src={artist.picture}/>
                             </li>)}
                         </ul>
                       <br/>
