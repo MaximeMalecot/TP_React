@@ -39,28 +39,31 @@ export default function Cocktail( {data=null} ){
     getIngredient(cocktail)
 
     return(
-        <div>
+        <div className="container">
         { (cocktail) && 
-            <div>
-                Nom du cocktail: {cocktail.strDrink} <br/>
-                Catégorie: {cocktail.strCategory}<br/>
-                Verre approprié: {cocktail.strGlass}<br/>
+            <div id="CocktailInfo">
+                <div className="row">
+                    <div className="col-12">Nom du cocktail: {cocktail.strDrink} <br/></div>
+                    <div className="col-12">Catégorie: {cocktail.strCategory}<br/></div>
+                    <div className="col-12">Verre approprié: {cocktail.strGlass}<br/></div>
+                </div>
                 {
-                    <ol>Ingrédients:
+                    <div className="row list-container"> 
+                    <div className="col-12">Ingrédients:</div>
                         { Ingredients && Ingredients.map( (ingredient, index) => 
-                            <li key={index}>{ingredient} ( {cocktail["strMeasure"+(index+1)]} )</li>)}
+                            <li className="col-12" key={index}>{ingredient} ( {cocktail["strMeasure"+(index+1)]} )</li>)}
                         
-                    </ol>
+                        </div>
                 }
-                Instructions:<br/> {cocktail.strInstructions}
-            
-                <br/>
-                <br/>
-                <br/>
+                    <div className="row">
+                        <div className="col-12">
+                            Instructions:<br/> {cocktail.strInstructions}
+                        </div>
+                    </div>   
             </div>
-            
         }
         </div>
+        
         
         
     );
