@@ -32,7 +32,7 @@ export default function CocktailDB(){
             <Link className="col-inner col-12" key={answer.idDrink} href={"/cocktail?id="+answer.idDrink}>
                 Nom: {answer.strDrink}
             </Link> ) : 
-            <div className="col-inner col-12">Frero y a R viens sur le vieux port un peu</div>}
+            <div className="col-inner col-12">Frero y a R, viens sur le vieux port un peu</div>}
             </ul>
             
         </div>

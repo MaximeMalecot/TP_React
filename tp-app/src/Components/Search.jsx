@@ -25,7 +25,7 @@ export default function Search( {className} ){
                 <button className="btn" onClick={confirm}>search</button>
             </div>
             { 
-                answers ? answers.map( answer => <li className="col-12" key={answer.id}>Title: <a key={answer.id} href={"/info?music="+answer.id}>{answer.title}</a>, Artist: <a key={answer.artist.id} href={"/info?artist="+answer.artist.id}>{answer.artist.name}</a></li> ) : <p className="col-12">Frero y a R viens sur le vieux port un peu</p>
+                answers ? answers.map( answer => <li className="col-12" key={answer.id}>Title: <a key={answer.id} href={"/info?music="+answer.id}>{answer.title}</a>, Artist: <a key={answer.artist.id} href={"/info?artist="+answer.artist.id}>{answer.artist.name}</a></li> ) : <p className="col-12">Frero y a R, viens sur le vieux port un peu</p>
             }
         </div>
     );
