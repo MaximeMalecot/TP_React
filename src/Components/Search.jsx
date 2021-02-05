@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Link from './Link';
 
 export default function Search( {className} ){
     const [input, setInput] = useState();
